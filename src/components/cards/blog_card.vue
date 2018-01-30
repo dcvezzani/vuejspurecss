@@ -5,7 +5,7 @@
     <img v-bind:src=markup.thumbnail class="pure-img"></img>
     <br/>
     <div class="pure-g">
-      <button v-on:click="openModal(markup)"
+      <button v-on:click="navToBlog"
               class="pure-u-1-1 pure-button button-xsmall button-dark-blue">{{ markup.buttonText }}</button>
     </div>
   </div>
@@ -14,5 +14,10 @@
 <script>
   export default {
     props: ['markup'],
+    methods: {
+      navToBlog () {
+        window.location.href = "https://welfie.co/blog";
+      }
+    },
   };
 </script>
